@@ -23,9 +23,15 @@ function isPalindrome(string) {
     let rev = string.split('').reverse().join('').toLowerCase();
     if ( string.toLowerCase() === rev ){
         return true;
-    } else {
-        return false;
     }
+    return false;
 }
 
-module.exports = {sum, mult, isAdult, sortArrayUp, isPalindrome};
+function isOddNumber(number) {
+    if ( number % 2 ) {
+        return true;
+    }
+    return false;
+}
+
+module.exports = {sum, mult, isAdult, sortArrayUp, isPalindrome, isOddNumber};

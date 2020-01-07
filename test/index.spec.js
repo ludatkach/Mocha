@@ -1,5 +1,5 @@
 const  assert = require('assert');
-const {sum, mult, isAdult, sortArrayUp, isPalindrome} = require('../index.js');
+const {sum, mult, isAdult, sortArrayUp, isPalindrome, isOddNumber} = require('../index.js');
 
 describe('function sum', () => {
     it('should function sum equal 6', () => {
@@ -22,14 +22,14 @@ describe('function isAdult', () => {
     it('should function isAdult equal more than 21', () => {
         assert.equal(isAdult(55), true);
     })
+    it('should function isAdult equal undefined', () => {
+        assert.equal(isAdult(-5), undefined);
+    })
     it('should function isAdult not equal if more than  21', () => {
         assert.notEqual(isAdult(30), false);
     })
     it('should function isAdult not equal if less than 21', () => {
         assert.notEqual(isAdult(2), true);
-    })
-    it('should function isAdult equal undefined', () => {
-        assert.equal(isAdult(-5), undefined);
     })
 })
 /*
@@ -46,10 +46,29 @@ describe('function isPalindrome', () => {
     it('should function isPalindrome equal `go`', () => {
         assert.equal(isPalindrome('go'), false);
     })
-    it('should function isPalindrome not equal `go`', () => {
-        assert.notEqual(isPalindrome('gaga'), true);
-    })
     it('should function isPalindrome equal empty string', () => {
         assert.equal(isPalindrome(''), true);
     })
+    it('should function isPalindrome not equal `go`', () => {
+        assert.notEqual(isPalindrome('gaga'), true);
+    })
+})
+
+describe('function isOddNumber' , () => {
+    it('should function isOddNumber equal true', () => {
+        assert.equal(isOddNumber(7), true);
+    })
+    it('should function isOddNumber equal false', () => {
+        assert.equal(isOddNumber(4), false);
+    })
+    it('should function isOddNumber equal true', () => {
+        assert.equal(isOddNumber(-5), true);
+    })
+    it('should function isOddNumber not equal true', () => {
+        assert.notEqual(isOddNumber(7), false);
+    })
+    it('should function isOddNumber not equal false', () => {
+        assert.notEqual(isOddNumber(4), true);
+    })
+
 })
