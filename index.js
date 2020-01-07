@@ -4,7 +4,7 @@ function sum(a, b){
 function mult( a, b) {
     return a * b;
 }
-function isAdult (number)  {
+function isAdult (number) {
     if( number < 0 )
         return undefined;
     if ( number > 20 ) {
@@ -14,7 +14,18 @@ function isAdult (number)  {
 }
 
 //[2, 3, 4, 0, 1]) ---> [0, 1, 2, 3, 4]
-function sortArrayUp ( arrayNumbers)  {
+function sortArrayUp ( arrayNumbers) {
     return arrayNumbers.sort((a,b) => a - b);
 }
-module.exports = {sum, mult, isAdult, sortArrayUp};
+
+//funct isPalindrome(‘ogo’) ---> true, (‘og’) --> false
+function isPalindrome(string) {
+    let rev = string.split('').reverse().join('').toLowerCase();
+    if ( string.toLowerCase() === rev ){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+module.exports = {sum, mult, isAdult, sortArrayUp, isPalindrome};
