@@ -1,5 +1,5 @@
 const  assert = require('assert');
-const {sum, mult, isAdult, sortArrayUp, isPalindrome, isOddNumber} = require('../index.js');
+const {sum, mult, isAdult, sortArrayUp, isPalindrome, isOddNumber, isEvenNumber} = require('../index.js');
 
 describe('function sum', () => {
     it('should function sum equal 6', () => {
@@ -69,6 +69,24 @@ describe('function isOddNumber' , () => {
     })
     it('should function isOddNumber not equal false', () => {
         assert.notEqual(isOddNumber(4), true);
+    })
+})
+
+describe('function isEvenNumber', () => {
+    it('should function isEvenNumber equal true', () => {
+        assert.equal(isEvenNumber(8), true);
+    })
+    it('should function isEvenNumber equal false', () => {
+        assert.equal(isEvenNumber(81), false);
+    })
+    it('should function isEvenNumber equal true', () => {
+        assert.equal(isEvenNumber(-18), true);
+    })
+    it('should function isEvenNumber not equal true', () => {
+        assert.notEqual(isEvenNumber(55), true);
+    })
+    it('should function isEvenNumber not equal false', () => {
+        assert.equal(isEvenNumber(999), false);
     })
 
 })

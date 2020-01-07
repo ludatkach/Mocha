@@ -34,4 +34,10 @@ function isOddNumber(number) {
     return false;
 }
 
-module.exports = {sum, mult, isAdult, sortArrayUp, isPalindrome, isOddNumber};
+function isEvenNumber(number) {
+    if ( number % 2 === 0 ) {
+        return true;
+    }
+    return false;
+}
+module.exports = {sum, mult, isAdult, sortArrayUp, isPalindrome, isOddNumber, isEvenNumber};
