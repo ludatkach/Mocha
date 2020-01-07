@@ -1,5 +1,5 @@
 const  assert = require('assert');
-const {sum, mult, isAdult} = require('../index.js');
+const {sum, mult, isAdult, sortArrayUp} = require('../index.js');
 
 describe('function sum', () => {
     it('should function sum equal 6', () => {
@@ -11,8 +11,8 @@ describe('function sum', () => {
     })
 })
 
-it('should mult works correct', () => {
-    assert.equal(mult(2,4), 8);
+    it('should mult works correct', () => {
+        assert.equal(mult(2,4), 8);
 })
 
 describe('function isAdult', () => {
@@ -22,10 +22,13 @@ describe('function isAdult', () => {
     it('should function isAdult equal more than 21', () => {
         assert.equal(isAdult(55), true);
     })
-    it('should function isAdult false if more than  21', () => {
+    it('should function isAdult not equal if more than  21', () => {
         assert.notEqual(isAdult(30), false);
     })
-    it('should function isAdult false if more than 21', () => {
-        assert.notEqual(isAdult(21), false);
+    it('should function isAdult not equal if less than 21', () => {
+        assert.notEqual(isAdult(2), true);
+    })
+    it('should function isAdult equal undefined', () => {
+        assert.equal(isAdult(-5), undefined);
     })
 })
