@@ -11,7 +11,7 @@ describe('function sum', () => {
     })
 })
 
-    it('should function mult works correct', () => {
+    it('should function mult works correctly', () => {
         assert.equal(mult(2,4), 8);
 })
 
@@ -32,12 +32,15 @@ describe('function isAdult', () => {
         assert.notEqual(isAdult(2), true);
     })
 })
-/*
+
 describe('function sortArrayUp', () => {
-    it('should function sortArrayUp works correct', () => {
-        assert.equal(sortArrayUp([2, 3, 4, 0, 1]), [0, 1, 2, 3, 4]);
+    it('should function sortArrayUp works correctly', () => {
+        assert.deepEqual(sortArrayUp([2, 3, 4, 0, 1]), [0, 1, 2, 3, 4]);
     })
-})  */
+    it('should function sortArrayUp works correctly', () => {
+        assert.notEqual(sortArrayUp([1, 9, 125, 2, 289]), [1,2,4,9,125,289]);
+    })
+})
 
 describe('function isPalindrome', () => {
     it('should function isPalindrome equal `ogo`', () => {
@@ -64,6 +67,9 @@ describe('function isOddNumber' , () => {
     it('should function isOddNumber equal true', () => {
         assert.equal(isOddNumber(-5), true);
     })
+    it('should function isOddNumber equal false', () => {
+        assert.equal(isOddNumber(0), false);
+    })
     it('should function isOddNumber not equal true', () => {
         assert.notEqual(isOddNumber(7), false);
     })
@@ -82,11 +88,10 @@ describe('function isEvenNumber', () => {
     it('should function isEvenNumber equal true', () => {
         assert.equal(isEvenNumber(-18), true);
     })
+    it('should function isEvenNumber equal true', () => {
+        assert.equal(isEvenNumber(0), true);
+    })
     it('should function isEvenNumber not equal true', () => {
-        assert.notEqual(isEvenNumber(55), true);
+        assert.notEqual(isEvenNumber(81), true);
     })
-    it('should function isEvenNumber not equal false', () => {
-        assert.equal(isEvenNumber(999), false);
-    })
-
 })
