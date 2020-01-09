@@ -10,11 +10,13 @@ describe('function sum', () => {
 
     it('should function sum not equals 0', () => {
         assert.notEqual(sum(2, 4),0);
+        expect(sum(2,4)).to.not.equal(0);
     })
 })
 
     it('should function mult works correctly', () => {
         assert.equal(mult(2,4), 8);
+        expect(mult(2,4)).to.equal(8);
 })
 
 describe('function isAdult', () => {
@@ -26,26 +28,29 @@ describe('function isAdult', () => {
         assert.equal(isAdult(55), true);
         expect(isAdult(55)).to.true;
     })
+    it('should function isAdult not equal if less than 21', () => {
+        assert.notEqual(isAdult(2), true);
+        expect(isAdult(2)).to.not.true;
+    })
     it('should function isAdult equal undefined', () => {
         assert.equal(isAdult(-5), undefined);
         expect(isAdult(-5)).undefined;
-    })
-    it('should function isAdult not equal if more than  21', () => {
-        assert.notEqual(isAdult(30), false);
-        expect(isAdult(30)).true;
-    })
-    it('should function isAdult not equal if less than 21', () => {
-        assert.notEqual(isAdult(2), true);
     })
 })
 
 describe('function sortArrayUp', () => {
     it('should function sortArrayUp works correctly', () => {
         assert.deepEqual(sortArrayUp([2, 3, 4, 0, 1]), [0, 1, 2, 3, 4]);
+        expect(sortArrayUp([2, 3, 4, 0, 1])).to.deep.equal([0, 1, 2, 3, 4]);
     })
     it('should function sortArrayUp works correctly', () => {
         assert.notEqual(sortArrayUp([1, 9, 125, 2, 289]), [1,2,4,9,125,289]);
+        expect(sortArrayUp([1, 9, 125, 2, 289])).to.not.equal([1,2,4,9,125,289]);
+        //expect([1, 2]).to.not.equal([1, 2]);
     })
+    /*it('should function sortArrayUp equal empty array', () => {
+        assert.equal(sortArrayUp(), []);
+    }) */
 })
 
 describe('function isPalindrome', () => {

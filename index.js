@@ -15,6 +15,9 @@ function isAdult (number) {
 
 //[2, 3, 4, 0, 1]) ---> [0, 1, 2, 3, 4]
 function sortArrayUp ( arrayNumbers) {
+    if ( typeof(arrayNumbers) === 'undefined' ) {
+        return [];
+    }
     return arrayNumbers.sort((a,b) => a - b);
 }
 
