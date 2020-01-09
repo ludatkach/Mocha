@@ -5,7 +5,7 @@ const {sum, mult, isAdult, sortArrayUp, isPalindrome, isOddNumber, isEvenNumber}
 describe('function sum', () => {
     it('should function sum equal 6', () => {
         assert.equal(sum(2, 4),6);
-        expect(sum(2,4)).eq(6)
+        expect(sum(2,4)).to.equal(6);
     })
 
     it('should function sum not equals 0', () => {
@@ -20,9 +20,11 @@ describe('function sum', () => {
 describe('function isAdult', () => {
     it('should function isAdult equal 21', () => {
         assert.equal(isAdult(21), true);
+        expect(isAdult(21)).to.be.true;
     })
     it('should function isAdult equal more than 21', () => {
         assert.equal(isAdult(55), true);
+        expect(isAdult(55)).to.true;
     })
     it('should function isAdult equal undefined', () => {
         assert.equal(isAdult(-5), undefined);
@@ -30,6 +32,7 @@ describe('function isAdult', () => {
     })
     it('should function isAdult not equal if more than  21', () => {
         assert.notEqual(isAdult(30), false);
+        expect(isAdult(30)).true;
     })
     it('should function isAdult not equal if less than 21', () => {
         assert.notEqual(isAdult(2), true);
