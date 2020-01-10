@@ -70,21 +70,19 @@ describe('function isPalindrome', () => {
 describe('function isOddNumber' , () => {
     it('should function isOddNumber equal true', () => {
         assert.equal(isOddNumber(7), true);
+        expect(isOddNumber(7)).eq(true);
     })
     it('should function isOddNumber equal false', () => {
         assert.equal(isOddNumber(4), false);
+        expect(isOddNumber(4)).eq(false);
     })
     it('should function isOddNumber equal true', () => {
         assert.equal(isOddNumber(-5), true);
+        expect(isOddNumber(-5)).eq(true);
     })
     it('should function isOddNumber equal false', () => {
         assert.equal(isOddNumber(0), false);
-    })
-    it('should function isOddNumber not equal true', () => {
-        assert.notEqual(isOddNumber(7), false);
-    })
-    it('should function isOddNumber not equal false', () => {
-        assert.notEqual(isOddNumber(4), true);
+        expect(isOddNumber(0)).eq(false);
     })
 })
 
