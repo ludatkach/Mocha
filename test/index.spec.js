@@ -1,6 +1,6 @@
 const  assert = require('assert');
 const {expect} = require('chai');
-const {sum, mult, isAdult, sortArrayUp, isPalindrome, isOddNumber, isEvenNumber} = require('../index.js');
+const {sum, mult, div, isAdult, sortArrayUp, isPalindrome, isOddNumber, isEvenNumber} = require('../index.js');
 
 describe('function sum', () => {
     it('should function sum equal 6', () => {
@@ -14,9 +14,26 @@ describe('function sum', () => {
     })
 })
 
+describe('function mult', () => {
     it('should function mult works correctly', () => {
-        assert.equal(mult(2,4), 8);
-        expect(mult(2,4)).to.equal(8);
+        assert.equal(mult(2, 4), 8);
+        expect(mult(2, 4)).to.equal(8);
+    })
+    it('should function mult equal 0', () => {
+        assert.equal(mult(2, 0), 0);
+        expect(mult(2, 0)).to.equal(0);
+    })
+})
+
+describe('function div', () => {
+    it('should function div works correctly', () => {
+        assert.equal(div(60, 2), 30);
+        expect(div(60, 2)).eq(30);
+    })
+    it('should function div equal \'Division by zero\'', () => {
+        //assert.equal(div(20, 0), 'Division by zero');
+        expect(div(20, 0)).to.eq('Division by zero');
+    })
 })
 
 describe('function isAdult', () => {
@@ -47,9 +64,10 @@ describe('function sortArrayUp', () => {
         assert.notEqual(sortArrayUp([1, 9, 125, 2, 289]), [1,2,4,9,125,289]);
         expect(sortArrayUp([1, 9, 125, 2, 289])).to.not.equal([1,2,4,9,125,289]);
     })
-    /*it('should function sortArrayUp equal empty array', () => {
-        assert.equal(sortArrayUp(), []);
-    }) */
+    it('should function sortArrayUp equal empty array', () => {
+        assert.deepEqual(sortArrayUp(), []);
+        expect(sortArrayUp()).to.deep.equal([]);
+    })
 })
 
 describe('function isPalindrome', () => {

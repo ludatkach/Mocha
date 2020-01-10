@@ -1,10 +1,18 @@
-function sum(a, b){
+function sum( a, b ){
     return a + b;
 }
-function mult( a, b) {
+
+function mult( a, b ) {
     return a * b;
 }
-function isAdult (number) {
+function div( a, b ) {
+    if ( b === 0 )  {
+        return ('Division by zero');
+    }
+    return a / b;
+}
+
+function isAdult ( number ) {
     if( number < 0 )
         return undefined;
     if ( number > 20 ) {
@@ -13,16 +21,14 @@ function isAdult (number) {
     return false;
 }
 
-//[2, 3, 4, 0, 1]) ---> [0, 1, 2, 3, 4]
-function sortArrayUp ( arrayNumbers) {
+function sortArrayUp ( arrayNumbers ) {
     if ( typeof(arrayNumbers) === 'undefined' ) {
         return [];
     }
     return arrayNumbers.sort((a,b) => a - b);
 }
 
-//funct isPalindrome(‘ogo’) ---> true, (‘og’) --> false
-function isPalindrome(string) {
+function isPalindrome( string ) {
     let rev = string.split('').reverse().join('').toLowerCase();
     if ( string.toLowerCase() === rev ){
         return true;
@@ -43,4 +49,4 @@ function isEvenNumber(number) {
     }
     return false;
 }
-module.exports = {sum, mult, isAdult, sortArrayUp, isPalindrome, isOddNumber, isEvenNumber};
+module.exports = {sum, mult, div, isAdult, sortArrayUp, isPalindrome, isOddNumber, isEvenNumber};
