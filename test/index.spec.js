@@ -46,7 +46,6 @@ describe('function sortArrayUp', () => {
     it('should function sortArrayUp works correctly', () => {
         assert.notEqual(sortArrayUp([1, 9, 125, 2, 289]), [1,2,4,9,125,289]);
         expect(sortArrayUp([1, 9, 125, 2, 289])).to.not.equal([1,2,4,9,125,289]);
-        //expect([1, 2]).to.not.equal([1, 2]);
     })
     /*it('should function sortArrayUp equal empty array', () => {
         assert.equal(sortArrayUp(), []);
@@ -56,15 +55,15 @@ describe('function sortArrayUp', () => {
 describe('function isPalindrome', () => {
     it('should function isPalindrome equal `ogo`', () => {
         assert.equal(isPalindrome('ogo'), true);
+        expect(isPalindrome('ogo')).eq(true);
     })
-    it('should function isPalindrome equal `go`', () => {
-        assert.equal(isPalindrome('go'), false);
+    it('should function isPalindrome equal `gaga` be false', () => {
+        assert.equal(isPalindrome('gaga'), false);
+        expect(isPalindrome('gaga')).eq(false);
     })
     it('should function isPalindrome equal empty string', () => {
         assert.equal(isPalindrome(''), true);
-    })
-    it('should function isPalindrome not equal `go`', () => {
-        assert.notEqual(isPalindrome('gaga'), true);
+        expect(isPalindrome('')).eq(true);
     })
 })
 
