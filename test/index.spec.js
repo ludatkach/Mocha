@@ -1,6 +1,6 @@
 const  assert = require('assert');
 const {expect} = require('chai');
-const {sum, mult, div, isAdult, sortArrayUp, isPalindrome, isOddNumber, isEvenNumber} = require('../index.js');
+const {sum, mult, div, divNumbers, isAdult, sortArrayUp, isPalindrome, isOddNumber, isEvenNumber} = require('../index.js');
 
 describe('function sum', () => {
     it('should function sum equal 6', () => {
@@ -31,8 +31,19 @@ describe('function div', () => {
         expect(div(60, 2)).eq(30);
     })
     it('should function div equal \'Division by zero\'', () => {
-        //assert.equal(div(20, 0), 'Division by zero');
+        assert.equal(div(20, 0), 'Division by zero');
         expect(div(20, 0)).to.eq('Division by zero');
+    })
+})
+
+describe('function divNumbers', () => {
+    it('should function divNumbers equal true', () => {
+        assert.equal(divNumbers(60, 2), true);
+        expect(divNumbers(60, 2)).to.be.true;
+    })
+    it('should function divNumbers equal false', () => {
+        assert.equal(divNumbers(20, null), false);
+        expect(divNumbers(20, 0)).to.be.false;
     })
 })
 

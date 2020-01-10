@@ -12,6 +12,13 @@ function div( a, b ) {
     return a / b;
 }
 
+function divNumbers(a, b) {
+    if (Number.isInteger(a / b)) {
+        return true;
+    }
+    return false;
+}
+
 function isAdult ( number ) {
     if( number < 0 )
         return undefined;
@@ -49,4 +56,7 @@ function isEvenNumber(number) {
     }
     return false;
 }
-module.exports = {sum, mult, div, isAdult, sortArrayUp, isPalindrome, isOddNumber, isEvenNumber};
+
+
+
+module.exports = {sum, mult, div, divNumbers, isAdult, sortArrayUp, isPalindrome, isOddNumber, isEvenNumber};
