@@ -81,26 +81,26 @@ describe('function isOddNumber' , () => {
         expect(isOddNumber(-5)).eq(true);
     })
     it('should function isOddNumber equal false', () => {
-        assert.equal(isOddNumber(0), false);
-        expect(isOddNumber(0)).eq(false);
+        assert.equal(isOddNumber(), false);
+        expect(isOddNumber()).eq(false);
     })
 })
 
 describe('function isEvenNumber', () => {
     it('should function isEvenNumber equal true', () => {
         assert.equal(isEvenNumber(8), true);
-        //expect(eisPo
+        expect(isEvenNumber(8)).eq(true);
     })
     it('should function isEvenNumber equal false', () => {
         assert.equal(isEvenNumber(81), false);
+        expect(isEvenNumber(81)).eq(false);
     })
     it('should function isEvenNumber equal true', () => {
         assert.equal(isEvenNumber(-18), true);
+        expect(isEvenNumber(-18)).eq(true);
     })
-    it('should function isEvenNumber equal true', () => {
-        assert.equal(isEvenNumber(0), true);
-    })
-    it('should function isEvenNumber not equal true', () => {
-        assert.notEqual(isEvenNumber(81), true);
+    it('should function isEvenNumber equal false', () => {
+        assert.equal(isEvenNumber(), false);
+        expect(isEvenNumber()).eq(false);
     })
 })
