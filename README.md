@@ -1,8 +1,10 @@
 # Unit Testing
 ## Description
-Unit tests create to test a logic of interface. They usually written before GUI exists and check if a function works correctly with giving it certain set of inputs.
 This project created to learn how to do Unit testing.
-We installed Node.js executes JavaScript code outside of a browser.
+
+The purpose of Unit tests is  to test a logic of interface. 
+
+They usually written before GUI exists and check if a function works correctly with giving it certain set of inputs.
 
 ## Installation
 To create Unit tests needs a testing framework and libraries. 
