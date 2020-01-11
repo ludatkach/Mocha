@@ -57,6 +57,14 @@ function isEvenNumber(number) {
     return false;
 }
 
+function breakChocolate(n,m) {
+    if ( n < 1 || m < 1) {
+        return 0;
+    }
+    if ( n===1 || m === 1 ) {
+        return Math.max(m,n) - 1;
+    }
+    return (m -1) + m * ( n - 1);
+}
 
-
-module.exports = {sum, mult, div, divNumbers, isAdult, sortArrayUp, isPalindrome, isOddNumber, isEvenNumber};
+module.exports = {sum, mult, div, divNumbers, isAdult, sortArrayUp, isPalindrome, isOddNumber, isEvenNumber, breakChocolate};

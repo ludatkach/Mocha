@@ -1,6 +1,6 @@
 const  assert = require('assert');
 const {expect} = require('chai');
-const {sum, mult, div, divNumbers, isAdult, sortArrayUp, isPalindrome, isOddNumber, isEvenNumber} = require('../index.js');
+const {sum, mult, div, divNumbers, isAdult, sortArrayUp, isPalindrome, isOddNumber, isEvenNumber, breakChocolate} = require('../index.js');
 
 describe('function sum', () => {
     it('should function sum equal 6', () => {
@@ -132,4 +132,18 @@ describe('function isEvenNumber', () => {
         assert.equal(isEvenNumber(), false);
         expect(isEvenNumber()).eq(false);
     })
+})
+
+describe('function breakChocolate', () => {
+    it('should function breakChocolate equal 0', () => {
+        assert.equal(breakChocolate(-3, -5), 0);
+        expect(breakChocolate(7,-2)).eq(0);
+    })
+    it ('should function breakChocolate equal 9', () => {
+        assert.equal(breakChocolate(1, 10), 9);
+    })
+    it('should function breakChocolate equal ', () => {
+        assert.equal(breakChocolate(4, 6), 23);
+    })
+
 })
