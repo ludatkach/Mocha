@@ -141,9 +141,16 @@ describe('function breakChocolate', () => {
     })
     it ('should function breakChocolate equal 9', () => {
         assert.equal(breakChocolate(1, 10), 9);
+        expect(breakChocolate(1,10)).eq(9);
     })
-    it('should function breakChocolate equal ', () => {
+    it('should function breakChocolate equal 23', () => {
         assert.equal(breakChocolate(4, 6), 23);
+        expect(breakChocolate(4,6)).eq(23);
+    })
+    it('should function breakChocolate ecual null', () => {
+        assert.equal(breakChocolate(3, 'srtueivfj'), null);
+        expect(breakChocolate(2, )).eq(null);
+
     })
 
 })

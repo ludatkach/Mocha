@@ -64,6 +64,9 @@ function breakChocolate(n,m) {
     if ( n===1 || m === 1 ) {
         return Math.max(m,n) - 1;
     }
+    if ( !Number.isInteger(n) || !Number.isInteger(m) ) {
+        return null;
+    }
     return (m -1) + m * ( n - 1);
 }
 
