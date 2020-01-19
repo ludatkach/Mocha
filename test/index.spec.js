@@ -111,7 +111,7 @@ describe('function isOddNumber' , () => {
   });
   it('should function isOddNumber equal false', () => {
     assert.equal(isOddNumber(), false);
-    expect(isOddNumber()).eq(false);
+    expect(isOddNumber().eq(false);
   });
 });
 
